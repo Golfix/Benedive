@@ -32,7 +32,7 @@
     .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
     .gallery figure { margin: 0; border-radius: 14px; overflow: hidden; aspect-ratio: 4/3; position: relative; box-shadow: var(--shadow-sm); transition: transform .25s ease, box-shadow .25s ease; }
     .gallery figure:hover { transform: translateY(-4px) scale(1.01); box-shadow: var(--shadow-md); }
-    .gallery .img { width: 100%; height: 100%; display: grid; place-items: center; color: rgba(255,255,255,.85); font-size: 3.5rem; }
+    .gallery .img { width: 100%; height: 100%; display: grid; place-items: center; color: rgba(255,255,255,.85); font-size: 3.5rem; background-size: cover; background-position: center; }
     .gallery figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: .9rem 1rem; background: linear-gradient(180deg, transparent, rgba(10,34,48,.75)); color: #fff; font-weight: 600; font-size: .92rem; }
     .gallery .tall { aspect-ratio: 3/4; }
     .gallery .wide { aspect-ratio: 16/10; grid-column: span 2; }
@@ -55,9 +55,9 @@
 
 <main>
 
-<section class="page-head">
+<section class="page-head page-head--photo" style="--head-img: url('https://images.unsplash.com/photo-1667852976264-880d2d6ff8e5?w=2000&amp;q=85');">
   <div class="container">
-    <span class="eyebrow" style="color:#F4A261;">Galerie</span>
+    <span class="eyebrow">Galerie</span>
     <h1>La Mer Rouge en images</h1>
     <p>Quelques instantanés des plongées et formations BeneDive. Suivez Instagram pour le quotidien.</p>
   </div>
@@ -73,67 +73,67 @@
     <h2>Épaves</h2>
     <div class="gallery mb-4">
       <figure>
-        <div class="img" style="background:linear-gradient(135deg,#003B5C,#006C8A);">⚓</div>
-        <figcaption>SS Thistlegorm — proue couverte de glassfish</figcaption>
+        <div class="img" style="background-image: url('https://images.unsplash.com/photo-1761145586984-0d2a8c471d15?w=800&amp;q=80');"></div>
+        <figcaption>Épave avec rayons de lumière — type Carnatic</figcaption>
       </figure>
       <figure class="wide">
-        <div class="img" style="background:linear-gradient(135deg,#0A2230,#005780);">🛳️</div>
-        <figcaption>Giannis D — la salle des machines à 20 m</figcaption>
+        <div class="img" style="background-image: url('https://images.unsplash.com/photo-1769007168623-ba1a417c3114?w=1400&amp;q=80');"></div>
+        <figcaption>Giannis D — concrétions sur la coque</figcaption>
       </figure>
       <figure>
-        <div class="img" style="background:linear-gradient(135deg,#004E6E,#00B4D8);">🚢</div>
-        <figcaption>Carnatic — coraux mous sur la structure</figcaption>
+        <div class="img" style="background-image: url('https://images.unsplash.com/photo-1683212292454-1fe6229603b7?w=800&amp;q=80'), url('https://images.unsplash.com/photo-1583212292454-1fe6229603b7?w=800&amp;q=80');"></div>
+        <figcaption>Coraux mous sur structure d'épave</figcaption>
       </figure>
       <figure>
-        <div class="img" style="background:linear-gradient(135deg,#003B5C,#0085A8);">🏍️</div>
-        <figcaption>Motos BSA dans la cale du Thistlegorm</figcaption>
+        <div class="img" style="background-image: url('https://images.unsplash.com/photo-1696855179885-2dc205ed0703?w=800&amp;q=80');"></div>
+        <figcaption>Glassfish autour d'une épave</figcaption>
       </figure>
     </div>
 
     <h2>Faune</h2>
     <div class="gallery mb-4">
       <figure>
-        <div class="img" style="background:linear-gradient(135deg,#00B4D8,#48CAE4);">🐢</div>
+        <div class="img" style="background-image: url('https://images.unsplash.com/photo-1518467166778-b88f373ffec7?w=800&amp;q=80');"></div>
         <figcaption>Tortue imbriquée — Big Giftun</figcaption>
       </figure>
       <figure class="tall">
-        <div class="img" style="background:linear-gradient(135deg,#0085A8,#00B4D8);">🐬</div>
+        <div class="img" style="background-image: url('https://images.unsplash.com/photo-1532393950032-b666e39c29b3?w=900&amp;q=80');"></div>
         <figcaption>Dauphins à long bec — Shaab El Erg</figcaption>
       </figure>
       <figure>
-        <div class="img" style="background:linear-gradient(135deg,#F4A261,#E76F51);">🐠</div>
-        <figcaption>Banc de fusiliers — Shaab Abu Ramada</figcaption>
+        <div class="img" style="background-image: url('https://images.unsplash.com/photo-1583212292454-1fe6229603b7?w=800&amp;q=80');"></div>
+        <figcaption>Banc d'anthias — Shaab Abu Ramada</figcaption>
       </figure>
       <figure>
-        <div class="img" style="background:linear-gradient(135deg,#2A9D8F,#48CAE4);">🦑</div>
-        <figcaption>Sépia commune — plongée de nuit El Fanadir</figcaption>
+        <div class="img" style="background-image: url('https://images.unsplash.com/photo-1573551089778-46a7abc39d9f?w=800&amp;q=80');"></div>
+        <figcaption>Tortue verte — surface eau cristalline</figcaption>
       </figure>
       <figure>
-        <div class="img" style="background:linear-gradient(135deg,#005780,#0085A8);">🦈</div>
-        <figcaption>Requin pointe blanche — Police Station</figcaption>
+        <div class="img" style="background-image: url('https://images.unsplash.com/photo-1637308106043-f4d78ad9e0e0?w=800&amp;q=80');"></div>
+        <figcaption>Banc de dauphins survolant le récif</figcaption>
       </figure>
       <figure>
-        <div class="img" style="background:linear-gradient(135deg,#E76F51,#F4A261);">🪸</div>
-        <figcaption>Gorgone géante — tombant Small Giftun</figcaption>
+        <div class="img" style="background-image: url('https://images.unsplash.com/photo-1637308109237-4ea1a7dd22f5?w=800&amp;q=80');"></div>
+        <figcaption>Récif corallien — tombant Small Giftun</figcaption>
       </figure>
     </div>
 
     <h2>Plongeurs &amp; formations</h2>
     <div class="gallery mb-4">
       <figure>
-        <div class="img" style="background:linear-gradient(135deg,#006C8A,#00B4D8);">🤿</div>
+        <div class="img" style="background-image: url('https://images.unsplash.com/photo-1544551763-92ab472cad5d?w=800&amp;q=80');"></div>
         <figcaption>Baptême sur Banana Reef — mars 2026</figcaption>
       </figure>
       <figure>
-        <div class="img" style="background:linear-gradient(135deg,#003B5C,#48CAE4);">🎓</div>
-        <figcaption>Cérémonie Open Water — promotion novembre 2025</figcaption>
+        <div class="img" style="background-image: url('https://images.unsplash.com/photo-1682687982502-1529b3b33f85?w=800&amp;q=80');"></div>
+        <figcaption>Cours Open Water — promotion novembre 2025</figcaption>
       </figure>
       <figure class="wide">
-        <div class="img" style="background:linear-gradient(135deg,#0A2230,#006C8A);">⛵</div>
+        <div class="img" style="background-image: url('https://images.unsplash.com/photo-1581773683009-11e0e759e9ad?w=1400&amp;q=80');"></div>
         <figcaption>Bateau au mouillage — Îles Giftun, vis 35 m</figcaption>
       </figure>
       <figure>
-        <div class="img" style="background:linear-gradient(135deg,#F4A261,#E76F51);">📸</div>
+        <div class="img" style="background-image: url('https://images.unsplash.com/photo-1682687981907-170c006e3744?w=800&amp;q=80');"></div>
         <figcaption>Spécialité Photographer — atelier sortie macro</figcaption>
       </figure>
     </div>
@@ -141,26 +141,26 @@
     <h2>Sites</h2>
     <div class="gallery">
       <figure class="wide">
-        <div class="img" style="background:linear-gradient(135deg,#003B5C 0%,#006C8A 50%,#00B4D8 100%);">🏝️</div>
+        <div class="img" style="background-image: url('https://images.unsplash.com/photo-1667852976264-880d2d6ff8e5?w=1400&amp;q=80');"></div>
         <figcaption>Coucher de soleil au retour des Giftun</figcaption>
       </figure>
       <figure>
-        <div class="img" style="background:linear-gradient(135deg,#006C8A,#00B4D8);">🌊</div>
+        <div class="img" style="background-image: url('https://images.unsplash.com/photo-1758968571011-af0157c61d7b?w=800&amp;q=80');"></div>
         <figcaption>Drop-off vertical — Erg Somaya</figcaption>
       </figure>
       <figure>
-        <div class="img" style="background:linear-gradient(135deg,#005780,#48CAE4);">🪨</div>
-        <figcaption>Pinacle isolé — Erg Sabina</figcaption>
+        <div class="img" style="background-image: url('https://images.unsplash.com/photo-1622567817558-3eac5d13fa86?w=800&amp;q=80');"></div>
+        <figcaption>Vue split bateau / sous l'eau</figcaption>
       </figure>
       <figure>
-        <div class="img" style="background:linear-gradient(135deg,#0085A8,#00B4D8);">🌅</div>
-        <figcaption>Sortie Dolphin House — départ 6h</figcaption>
+        <div class="img" style="background-image: url('https://images.unsplash.com/photo-1667852976355-600df04dca82?w=800&amp;q=80');"></div>
+        <figcaption>Sortie Dolphin House — départ au lever du jour</figcaption>
       </figure>
     </div>
 
-    <p class="text-center mt-4" style="color:var(--c-ink-soft);">
-      Note : les visuels ci-dessus sont des marqueurs en attendant la publication des photos
-      originales sous-marines BeneDive. Crédit photo réservé — usage interdit sans autorisation écrite.
+    <p class="text-center mt-4" style="color:var(--c-ink-soft);font-size:.85rem;">
+      Photos illustratives — Unsplash (libres de droit). Les vraies photos sous-marines de BeneDive
+      seront ajoutées au fur et à mesure de la saison.
     </p>
 
   </div>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-label="PADI Open Water Scuba Instructor">
+  <title>PADI Open Water Scuba Instructor</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A2230"/>
+      <stop offset="1" stop-color="#003B5C"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="200" rx="16" fill="url(#bg)"/>
+
+  <!-- PADI red square -->
+  <rect x="20" y="60" width="80" height="80" rx="4" fill="#C8102E"/>
+  <text x="60" y="108" text-anchor="middle"
+        font-family="Helvetica, Arial, sans-serif" font-weight="900"
+        font-size="28" fill="#FFFFFF" letter-spacing="1">PADI</text>
+  <text x="60" y="124" text-anchor="middle"
+        font-family="Helvetica, Arial, sans-serif" font-weight="400"
+        font-size="6" fill="#FFFFFF" letter-spacing="0.5">PROFESSIONAL ASSOCIATION</text>
+  <text x="60" y="132" text-anchor="middle"
+        font-family="Helvetica, Arial, sans-serif" font-weight="400"
+        font-size="6" fill="#FFFFFF" letter-spacing="0.5">OF DIVING INSTRUCTORS</text>
+
+  <!-- Texte droite -->
+  <text x="120" y="90"
+        font-family="Manrope, Helvetica, Arial, sans-serif" font-weight="800"
+        font-size="22" fill="#FFFFFF">OPEN WATER</text>
+  <text x="120" y="118"
+        font-family="Manrope, Helvetica, Arial, sans-serif" font-weight="800"
+        font-size="22" fill="#FFFFFF">SCUBA</text>
+  <text x="120" y="146"
+        font-family="Manrope, Helvetica, Arial, sans-serif" font-weight="800"
+        font-size="22" fill="#F4A261">INSTRUCTOR</text>
+
+  <!-- Petite ligne sous -->
+  <line x1="120" y1="156" x2="290" y2="156" stroke="#F4A261" stroke-width="1.5" opacity=".5"/>
+  <text x="120" y="172"
+        font-family="Helvetica, Arial, sans-serif" font-weight="500"
+        font-size="9" fill="#FFFFFF" fill-opacity=".75" letter-spacing="1.5">CERTIFIED MEMBER — BÉNÉDICTE IMBERT</text>
+</svg>

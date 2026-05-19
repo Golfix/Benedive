@@ -1644,3 +1644,84 @@ textarea:focus-visible {
   to   { opacity: 1; transform: translateY(0); }
 }
 
+
+/* ---- PADI Badge dans trust strip --------------------------------------- */
+.hero-v2__trust img {
+  width: 76px; height: 76px;
+  filter: drop-shadow(0 8px 16px rgba(0,0,0,.3));
+  flex-shrink: 0;
+}
+.hero-v2__trust { align-items: center; }
+
+/* ---- Section PADI badges row ------------------------------------------ */
+.padi-strip {
+  padding: 2rem 0;
+  background: var(--c-bg-alt);
+  border-block: 1px solid var(--c-border);
+}
+.padi-strip__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  flex-wrap: wrap;
+  text-align: center;
+}
+.padi-strip__title {
+  font-size: .85rem;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--c-ink-soft);
+  margin: 0;
+  font-weight: 600;
+  width: 100%;
+}
+.padi-strip img { height: 64px; width: auto; opacity: .9; transition: opacity .2s ease; }
+.padi-strip img:hover { opacity: 1; }
+.padi-strip__instructor { height: 80px !important; }
+
+/* PADI credential card */
+.padi-cred {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(160deg, #0A2230, #003B5C);
+  color: #fff;
+  border-radius: 14px;
+  box-shadow: 0 14px 32px rgba(0, 59, 92, .25);
+}
+.padi-cred img { height: 56px; width: auto; }
+.padi-cred__txt strong { display: block; font-size: 1rem; font-weight: 800; }
+.padi-cred__txt span { display: block; font-size: .82rem; opacity: .8; }
+
+/* ---- Page-head avec photo background ----------------------------------- */
+.page-head--photo {
+  position: relative;
+  background: #021829;
+  overflow: hidden;
+  isolation: isolate;
+}
+.page-head--photo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--head-img);
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  filter: saturate(1.1);
+}
+.page-head--photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 80% at 50% 50%, transparent 0%, rgba(2, 24, 41, .5) 50%, rgba(2, 24, 41, .85) 100%),
+    linear-gradient(180deg, rgba(2, 24, 41, .35), rgba(2, 24, 41, .85));
+  z-index: 1;
+}
+.page-head--photo > * { position: relative; z-index: 2; }
+.page-head--photo h1 { color: #fff; }
+.page-head--photo p { color: rgba(255,255,255,.92); }
+.page-head--photo .eyebrow { color: #F4A261 !important; }
