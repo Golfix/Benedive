@@ -1729,3 +1729,55 @@ textarea:focus-visible {
 .page-head--photo h1 { color: #fff; }
 .page-head--photo p { color: rgba(255,255,255,.92); }
 .page-head--photo .eyebrow { color: #F4A261 !important; }
+
+/* ==========================================================================
+   v4 — Icônes SVG raffinées (remplacement emoji)
+   ========================================================================== */
+
+.icon { width: 1em; height: 1em; flex-shrink: 0; vertical-align: middle; }
+.icon-sm { width: 16px; height: 16px; }
+.icon-md { width: 22px; height: 22px; }
+.icon-lg { width: 28px; height: 28px; }
+.icon-xl { width: 32px; height: 32px; }
+
+/* Card icon : remplace l'emoji par un SVG centré */
+.card__icon svg,
+.gear-card__icon svg,
+.level-card__icon svg,
+.hiw-step__num svg {
+  width: 28px;
+  height: 28px;
+  color: #fff;
+}
+.card__icon, .gear-card__icon, .level-card__icon, .hiw-step__num { font-size: 0; }
+.hiw-step__num { font-family: 'Bricolage Grotesque', sans-serif; font-size: 2rem; }
+
+/* Icônes inline dans le texte (footer, hero badges, etc.) */
+.inline-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+}
+.inline-icon svg {
+  width: 18px;
+  height: 18px;
+  color: var(--c-primary);
+  flex-shrink: 0;
+}
+.footer .inline-icon svg { color: #F4A261; }
+
+/* Eyebrow avec petite icône */
+.eyebrow svg { width: 14px; height: 14px; vertical-align: -2px; margin-right: .35rem; }
+
+/* Section header avec icône */
+.section-title-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: .75rem;
+  justify-content: center;
+}
+.section-title-icon svg {
+  width: 32px;
+  height: 32px;
+  color: var(--c-coral);
+}
