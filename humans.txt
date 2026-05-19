@@ -1,0 +1,9 @@
+/* TEAM */
+Instructrice : Bénédicte Imbert
+Site : https://www.benedive.com
+Localisation : Hurghada, Égypte
+
+/* SITE */
+Langue : Français (FR)
+Doctype : HTML5
+Optimisation : Mobile-first, Core Web Vitals

@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Empêcher l'indexation de fichiers techniques
+Disallow: /.well-known/
+Disallow: /*.json$
+
+# Sitemap
+Sitemap: https://www.benedive.com/sitemap.xml
+
+# Hôte canonique
+Host: https://www.benedive.com

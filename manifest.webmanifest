@@ -1,0 +1,22 @@
+{
+  "name": "BeneDive — Plongée PADI à Hurghada avec Bénédicte Imbert",
+  "short_name": "BeneDive",
+  "description": "Cours, baptêmes et sorties plongée en Mer Rouge avec Bénédicte Imbert, instructrice PADI francophone à Hurghada.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#003B5C",
+  "theme_color": "#003B5C",
+  "lang": "fr",
+  "icons": [
+    {
+      "src": "/images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
