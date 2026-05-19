@@ -59,7 +59,6 @@ sur n'importe quel hébergeur statique (Netlify, Cloudflare Pages, GitHub Pages,
 |--------------------------|---------------------------------------------------------|
 | `+20 15 58664187`       | Numéro de téléphone réel de Bénédicte                   |
 | `+201558664187`          | Idem, format URI WhatsApp (sans espaces ni +)           |
-| `contact@benedive.com`   | Email de contact réel                                   |
 | `Sheraton Road`          | Adresse précise du centre de plongée partenaire         |
 | `27.2579 / 33.8116`      | Coordonnées GPS exactes                                 |
 | `og-cover.jpg`           | Image Open Graph 1200×630 à créer (`/images/`)          |
@@ -75,9 +74,7 @@ photos sous-marines BeneDive (format `.webp` ou `.avif` conseillé, dimensions m
 Ces valeurs sont des placeholders — à mettre à jour avec les vrais chiffres de la fiche Google Business Profile
 une fois celle-ci active, sinon Google sanctionne pour faux avis.
 
-**Formulaire** : le contact pointe vers FormSubmit (`formsubmit.co/contact@benedive.com`).
-Premier envoi nécessitera une activation par clic sur un mail de confirmation envoyé à
-contact@benedive.com. Alternative : intégrer Formspree, Web3Forms, ou un endpoint propre.
+**Formulaire de contact** : pure JS — au clic, ouvre WhatsApp avec un message pré-rempli vers le numéro de Bénédicte. Pas de backend, pas d'email, pas de stockage de données. RGPD-friendly.
 
 ## Local SEO — checklist à mettre en place après livraison
 
