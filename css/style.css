@@ -1676,9 +1676,13 @@ textarea:focus-visible {
   font-weight: 600;
   width: 100%;
 }
-.padi-strip img { height: 64px; width: auto; opacity: .9; transition: opacity .2s ease; }
-.padi-strip img:hover { opacity: 1; }
-.padi-strip__instructor { height: 80px !important; }
+.padi-strip img { height: 82px; width: auto; opacity: .95; transition: opacity .2s ease, transform .2s ease; }
+.padi-strip img:hover { opacity: 1; transform: scale(1.05); }
+.padi-strip__instructor { height: 100px !important; }
+@media (max-width: 700px) {
+  .padi-strip img { height: 60px; }
+  .padi-strip__instructor { height: 72px !important; }
+}
 
 /* PADI credential card */
 .padi-cred {
