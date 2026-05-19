@@ -15,6 +15,12 @@
   </url>
 
   <url>
+    <loc>https://www.benedive.com/premiere-plongee.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
     <loc>https://www.benedive.com/bapteme-plongee-hurghada.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>

@@ -24,7 +24,7 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"ContactPage","name":"Contact BeneDive",
    "url":"https://www.benedive.com/contact.html",
-   "mainEntity":{"@type":"LocalBusiness","name":"BeneDive","telephone":"+20-100-000-0000","email":"contact@benedive.com",
+   "mainEntity":{"@type":"LocalBusiness","name":"BeneDive","telephone":"+20-15-58664187","email":"contact@benedive.com",
    "address":{"@type":"PostalAddress","streetAddress":"Sheraton Road","addressLocality":"Hurghada","addressCountry":"EG"}}}
   </script>
 
@@ -42,7 +42,7 @@
     <a href="/" class="brand"><span class="brand__mark">B</span><span class="brand__name">Bene<b>Dive</b></span></a>
     <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
     <nav class="nav" id="primary-nav" aria-label="Navigation principale">
-      <a href="/">Accueil</a><a href="/a-propos.html">À propos</a><a href="/bapteme-plongee-hurghada.html">Baptême</a>
+      <a href="/">Accueil</a><a href="/premiere-plongee.html">Première plongée</a>
       <a href="/cours-padi.html">Cours PADI</a><a href="/sites-de-plongee-hurghada.html">Sites</a>
       <a href="/tarifs.html">Tarifs</a><a href="/contact.html" class="btn btn--primary btn--sm nav__cta" aria-current="page">Réserver</a>
     </nav>
@@ -71,14 +71,14 @@
         <h2>Le plus rapide : WhatsApp</h2>
         <p>Pour bloquer une date, demander une dispo, ou simplement échanger en direct, le WhatsApp est de loin le canal le plus rapide.</p>
         <p>
-          <a href="https://wa.me/201000000000" class="btn btn--primary" target="_blank" rel="noopener">
+          <a href="https://wa.me/201558664187" class="btn btn--primary" target="_blank" rel="noopener">
             💬 Écrire sur WhatsApp
           </a>
         </p>
 
         <h3 class="mt-4">Autres moyens</h3>
         <ul style="list-style:none;padding:0;font-size:1.05rem;line-height:2;">
-          <li>📞 <b>Téléphone</b> · <a href="tel:+201000000000">+20 100 000 0000</a></li>
+          <li>📞 <b>Téléphone</b> · <a href="tel:+201558664187">+20 15 58664187</a></li>
           <li>✉️ <b>Email</b> · <a href="mailto:contact@benedive.com">contact@benedive.com</a></li>
           <li>📍 <b>Adresse</b> · Sheraton Road, Hurghada 84511, Égypte</li>
           <li>🕒 <b>Disponible</b> · 7 jours sur 7, de 7 h à 20 h (heure locale UTC+2)</li>
@@ -94,38 +94,27 @@
 
       <div>
         <h2>Formulaire de demande</h2>
-        <p style="color:var(--c-ink-soft);">Plus vous donnez d'infos (dates, niveau, hôtel), plus la réponse est précise.</p>
-        <form class="form" action="https://formsubmit.co/contact@benedive.com" method="POST">
-          <input type="hidden" name="_subject" value="Nouvelle demande BeneDive">
-          <input type="hidden" name="_captcha" value="true">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_next" value="https://www.benedive.com/contact.html?envoye=1">
+        <p style="color:var(--c-ink-soft);">
+          Remplissez ces quelques champs — au clic, votre message s'ouvre <b>directement dans WhatsApp</b>,
+          déjà rédigé. Bénédicte vous répond en quelques heures.
+        </p>
+        <form class="form" id="contactForm" novalidate>
 
           <div class="field--row">
             <div class="field">
               <label for="prenom">Prénom *</label>
-              <input id="prenom" name="prenom" type="text" required>
+              <input id="prenom" name="prenom" type="text" required autocomplete="given-name">
             </div>
             <div class="field">
-              <label for="nom">Nom *</label>
-              <input id="nom" name="nom" type="text" required>
-            </div>
-          </div>
-
-          <div class="field--row">
-            <div class="field">
-              <label for="email">Email *</label>
-              <input id="email" name="email" type="email" required>
-            </div>
-            <div class="field">
-              <label for="tel">Téléphone / WhatsApp</label>
-              <input id="tel" name="tel" type="tel" placeholder="+33 6...">
+              <label for="nom">Nom</label>
+              <input id="nom" name="nom" type="text" autocomplete="family-name">
             </div>
           </div>
 
           <div class="field">
             <label for="prestation">Quelle prestation vous intéresse ?</label>
             <select id="prestation" name="prestation">
+              <option>Je ne sais pas encore, à conseiller</option>
               <option>Baptême de plongée</option>
               <option>PADI Scuba Diver</option>
               <option selected>PADI Open Water Diver</option>
@@ -133,20 +122,19 @@
               <option>Pack OW + Advanced</option>
               <option>PADI Rescue Diver + EFR</option>
               <option>PADI Divemaster (stage)</option>
-              <option>Spécialité PADI</option>
+              <option>Spécialité PADI (Nitrox, Wreck, Deep…)</option>
               <option>Sortie journée / fun dives</option>
               <option>Excursion Thistlegorm</option>
-              <option>Plusieurs / je ne sais pas</option>
             </select>
           </div>
 
           <div class="field--row">
             <div class="field">
-              <label for="date">Dates souhaitées</label>
-              <input id="date" name="date" type="text" placeholder="ex. 10-17 avril 2026">
+              <label for="dates">Dates souhaitées</label>
+              <input id="dates" name="dates" type="text" placeholder="ex. 10-17 avril 2026">
             </div>
             <div class="field">
-              <label for="niveau">Votre niveau actuel</label>
+              <label for="niveau">Niveau actuel</label>
               <select id="niveau" name="niveau">
                 <option>Aucun (jamais plongé)</option>
                 <option>Baptême déjà fait</option>
@@ -170,17 +158,55 @@
           </div>
 
           <div class="field">
-            <label for="message">Votre message</label>
-            <textarea id="message" name="message" placeholder="Tout détail utile : enfants, contraintes médicales, envies particulières..."></textarea>
+            <label for="message">Petit mot (facultatif)</label>
+            <textarea id="message" name="message" placeholder="Tout détail utile : enfants, contraintes médicales, envies particulières…"></textarea>
           </div>
 
           <p style="font-size:.85rem;color:var(--c-ink-soft);">
-            En envoyant ce formulaire, vous acceptez que vos informations soient utilisées uniquement pour vous répondre.
-            Voir les <a href="/mentions-legales.html">mentions légales</a>.
+            🔒 Aucune donnée n'est stockée par ce site : votre message est envoyé directement sur le WhatsApp
+            de Bénédicte. Voir les <a href="/mentions-legales.html">mentions légales</a>.
           </p>
 
-          <button type="submit" class="btn btn--primary">Envoyer ma demande</button>
+          <button type="submit" class="btn btn--primary btn--xl">
+            💬 Envoyer ma demande sur WhatsApp
+          </button>
         </form>
+
+        <script>
+          (function () {
+            var form = document.getElementById('contactForm');
+            if (!form) return;
+            var PHONE = '201558664187';
+            form.addEventListener('submit', function (e) {
+              e.preventDefault();
+              var d = function (id) {
+                var el = document.getElementById(id);
+                return el ? (el.value || '').trim() : '';
+              };
+              var prenom = d('prenom');
+              if (!prenom) {
+                document.getElementById('prenom').focus();
+                return;
+              }
+              var line = function (label, val) { return val ? ('• ' + label + ' : ' + val + '\n') : ''; };
+              var msg =
+                'Bonjour Bénédicte 👋\n\n' +
+                'Je viens du site BeneDive et j\'aimerais avoir des informations / réserver.\n\n' +
+                line('Prénom', prenom) +
+                line('Nom', d('nom')) +
+                line('Prestation', d('prestation')) +
+                line('Dates', d('dates')) +
+                line('Niveau', d('niveau')) +
+                line('Personnes', d('personnes')) +
+                line('Hôtel', d('hotel'));
+              var note = d('message');
+              if (note) { msg += '\n📝 Mot perso :\n' + note + '\n'; }
+              msg += '\nMerci !';
+              var url = 'https://wa.me/' + PHONE + '?text=' + encodeURIComponent(msg);
+              window.open(url, '_blank', 'noopener');
+            });
+          })();
+        </script>
       </div>
 
     </div>
@@ -212,15 +238,15 @@
   <div class="container">
     <div class="footer__grid">
       <div><div class="footer__brand">Bene<span style="color:#F4A261;">Dive</span></div><p>Plongée PADI francophone à Hurghada, Mer Rouge.</p></div>
-      <div><h4>Plonger</h4><ul><li><a href="/bapteme-plongee-hurghada.html">Baptême</a></li><li><a href="/cours-padi/open-water-diver.html">Open Water</a></li><li><a href="/cours-padi/advanced-open-water.html">Advanced</a></li><li><a href="/cours-padi/rescue-diver.html">Rescue</a></li><li><a href="/cours-padi/divemaster.html">Divemaster</a></li><li><a href="/cours-padi/specialites.html">Spécialités</a></li></ul></div>
+      <div><h4>Plonger</h4><ul><li><a href="/premiere-plongee.html">Première plongée</a></li><li><a href="/bapteme-plongee-hurghada.html">Baptême</a></li><li><a href="/cours-padi/open-water-diver.html">Open Water</a></li><li><a href="/cours-padi/advanced-open-water.html">Advanced</a></li><li><a href="/cours-padi/rescue-diver.html">Rescue</a></li><li><a href="/cours-padi/divemaster.html">Divemaster</a></li><li><a href="/cours-padi/specialites.html">Spécialités</a></li></ul></div>
       <div><h4>Explorer</h4><ul><li><a href="/sites-de-plongee-hurghada.html">Sites</a></li><li><a href="/tarifs.html">Tarifs</a></li><li><a href="/galerie.html">Galerie</a></li><li><a href="/temoignages.html">Témoignages</a></li><li><a href="/faq.html">FAQ</a></li></ul></div>
-      <div><h4>Contact</h4><ul><li>📍 Hurghada, Égypte</li><li>📞 <a href="tel:+201000000000">+20 100 000 0000</a></li><li>✉️ <a href="mailto:contact@benedive.com">contact@benedive.com</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li>📍 Hurghada, Égypte</li><li>📞 <a href="tel:+201558664187">+20 15 58664187</a></li><li>✉️ <a href="mailto:contact@benedive.com">contact@benedive.com</a></li></ul></div>
     </div>
     <div class="footer__bottom"><span>© <span data-year>2026</span> BeneDive</span><span><a href="/mentions-legales.html">Mentions légales</a> · <a href="/sitemap.xml">Plan du site</a></span></div>
   </div>
 </footer>
 
-<a class="whatsapp-fab" href="https://wa.me/201000000000" aria-label="WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-1.6-.8-2.7-1.4-3.7-3.2-.3-.5.3-.5.8-1.4.1-.2.1-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.8.5-.1 1.8-.7 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.2-.6-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.3c1.4.8 3 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg></a>
+<a class="whatsapp-fab" href="https://wa.me/201558664187" aria-label="WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-1.6-.8-2.7-1.4-3.7-3.2-.3-.5.3-.5.8-1.4.1-.2.1-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.8.5-.1 1.8-.7 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.2-.6-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.3c1.4.8 3 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg></a>
 
 <script src="/js/main.js" defer></script>
 </body>

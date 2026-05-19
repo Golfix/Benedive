@@ -57,14 +57,14 @@ sur n'importe quel hébergeur statique (Netlify, Cloudflare Pages, GitHub Pages,
 
 | Placeholder              | Valeur réelle attendue                                  |
 |--------------------------|---------------------------------------------------------|
-| `+20 100 000 0000`       | Numéro de téléphone réel de Bénédicte                   |
-| `+201000000000`          | Idem, format URI WhatsApp (sans espaces ni +)           |
+| `+20 15 58664187`       | Numéro de téléphone réel de Bénédicte                   |
+| `+201558664187`          | Idem, format URI WhatsApp (sans espaces ni +)           |
 | `contact@benedive.com`   | Email de contact réel                                   |
 | `Sheraton Road`          | Adresse précise du centre de plongée partenaire         |
 | `27.2579 / 33.8116`      | Coordonnées GPS exactes                                 |
 | `og-cover.jpg`           | Image Open Graph 1200×630 à créer (`/images/`)          |
 | `images/icon-192.png`, `512.png` | Icônes PWA carrées à générer                    |
-| `https://wa.me/201000000000` | Lien WhatsApp avec vrai numéro                      |
+| `https://wa.me/201558664187` | Lien WhatsApp avec vrai numéro                      |
 | `https://www.benedive.com/` | OK une fois le domaine pointé                        |
 
 **Galerie** : la page `/galerie.html` utilise des placeholders en SVG/dégradés. Remplacer par les vraies
