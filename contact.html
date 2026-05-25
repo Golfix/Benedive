@@ -70,7 +70,7 @@
 
       <div>
         <h2>Le plus rapide : WhatsApp</h2>
-        <p>Pour bloquer une date, demander une dispo, ou simplement échanger en direct, le WhatsApp est de loin le canal le plus rapide.</p>
+        <p>Pour bloquer une date, demander une dispo, ou simplement échanger en direct, le WhatsApp est de loin le canal le plus rapide — vous pouvez aussi remplir le formulaire ci-contre, c'est tout aussi efficace.</p>
         <p>
           <a href="https://wa.me/201558664187" class="btn btn--primary" target="_blank" rel="noopener">
             <svg class="icon icon-md"><use href="images/icons.svg#i-whatsapp"/></svg> Écrire sur WhatsApp
@@ -80,8 +80,7 @@
         <h3 class="mt-4">Autres moyens</h3>
         <ul style="list-style:none;padding:0;font-size:1.05rem;line-height:2;">
           <li><span class="inline-icon"><svg class="icon icon-sm"><use href="images/icons.svg#i-phone"/></svg></span> <b>Téléphone</b> · <a href="tel:+201558664187">+20 15 58664187</a></li>
-          
-          <li><span class="inline-icon"><svg class="icon icon-sm"><use href="images/icons.svg#i-pin"/></svg></span> <b>Adresse</b> · Sheraton Road, Hurghada 84511, Égypte</li>
+          <li><span class="inline-icon"><svg class="icon icon-sm"><use href="images/icons.svg#i-pin"/></svg></span> <b>Adresse</b> · Hurghada, Égypte</li>
           <li><span class="inline-icon"><svg class="icon icon-sm"><use href="images/icons.svg#i-clock"/></svg></span> <b>Disponible</b> · 7 jours sur 7, de 7 h à 20 h (heure locale UTC+2)</li>
         </ul>
 
@@ -96,9 +95,13 @@
       <div>
         <h2>Formulaire de demande</h2>
         <p style="color:var(--c-ink-soft);">
-          Remplissez ces quelques champs — au clic, votre message s'ouvre <b>directement dans WhatsApp</b>,
-          déjà rédigé. Bénédicte vous répond en quelques heures.
+          Remplissez ces quelques champs — Bénédicte reçoit votre message directement
+          et vous recontacte sous 24&nbsp;h. Sans engagement.
         </p>
+
+        <!-- État success / error caché par défaut -->
+        <div id="formStatus" role="status" aria-live="polite" style="display:none;"></div>
+
         <form class="form" id="contactForm" novalidate>
 
           <div class="field--row">
@@ -112,20 +115,31 @@
             </div>
           </div>
 
+          <div class="field--row">
+            <div class="field">
+              <label for="email">Email (pour réponse écrite)</label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="ex. prenom@email.com">
+            </div>
+            <div class="field">
+              <label for="telephone">Téléphone / WhatsApp</label>
+              <input id="telephone" name="telephone" type="tel" autocomplete="tel" placeholder="ex. +33 6 12 34 56 78">
+            </div>
+          </div>
+
           <div class="field">
             <label for="prestation">Quelle prestation vous intéresse ?</label>
             <select id="prestation" name="prestation">
               <option>Je ne sais pas encore, à conseiller</option>
               <option>Baptême de plongée</option>
-              <option>PADI Scuba Diver</option>
               <option selected>PADI Open Water Diver</option>
               <option>PADI Advanced Open Water</option>
-              <option>Pack OW + Advanced</option>
               <option>PADI Rescue Diver + EFR</option>
               <option>PADI Divemaster (stage)</option>
-              <option>Spécialité PADI (Nitrox, Wreck, Deep…)</option>
-              <option>Sortie journée / fun dives</option>
-              <option>Excursion Thistlegorm</option>
+              <option>Spécialité PADI (Nitrox, Wreck, Deep, Night…)</option>
+              <option>Forfait journée(s) plongée certifié</option>
+              <option>Excursion Elphinstone — Marsa Alam</option>
+              <option>Excursion Thistlegorm / Abu Nuhas</option>
+              <option>Excursion dauphins / Caire / Louxor</option>
             </select>
           </div>
 
@@ -163,48 +177,90 @@
             <textarea id="message" name="message" placeholder="Tout détail utile : enfants, contraintes médicales, envies particulières…"></textarea>
           </div>
 
+          <!-- Honeypot anti-bot : caché aux humains, attire les bots -->
+          <div class="hp-field" aria-hidden="true" style="position:absolute;left:-9999px;top:-9999px;opacity:0;">
+            <label for="hp_website">Ne remplissez pas ce champ</label>
+            <input id="hp_website" name="_honeypot" type="text" tabindex="-1" autocomplete="off">
+          </div>
+
           <p style="font-size:.85rem;color:var(--c-ink-soft);">
-            🔒 Aucune donnée n'est stockée par ce site : votre message est envoyé directement sur le WhatsApp
-            de Bénédicte. Voir les <a href="mentions-legales.html">mentions légales</a>.
+            🔒 Vos données sont envoyées directement à Bénédicte (WhatsApp + email), <b>aucun stockage tiers</b>.
+            Voir les <a href="mentions-legales.html">mentions légales</a>.
           </p>
 
-          <button type="submit" class="btn btn--primary btn--xl">
-            <svg class="icon icon-md"><use href="images/icons.svg#i-whatsapp"/></svg> Envoyer ma demande sur WhatsApp
+          <button type="submit" id="contactSubmit" class="btn btn--primary btn--xl">
+            Envoyer ma demande
           </button>
+          <noscript>
+            <p style="color:var(--c-coral);font-size:.9rem;">JavaScript est requis pour envoyer le formulaire. Vous pouvez aussi écrire directement sur <a href="https://wa.me/201558664187">WhatsApp +20 15 58664187</a>.</p>
+          </noscript>
         </form>
 
         <script>
           (function () {
+            // ⚠️ À CONFIGURER après déploiement du Cloudflare Worker
+            // ex. https://benedive-contact-form.tonsubdomain.workers.dev
+            var WORKER_URL = 'https://benedive-contact-form.YOUR-WORKER.workers.dev/';
+
             var form = document.getElementById('contactForm');
+            var statusBox = document.getElementById('formStatus');
+            var submitBtn = document.getElementById('contactSubmit');
             if (!form) return;
-            var PHONE = '201558664187';
-            form.addEventListener('submit', function (e) {
+
+            function showStatus(type, html) {
+              statusBox.style.display = 'block';
+              var bg = type === 'success' ? '#E8F5E9' : '#FFEBEE';
+              var fg = type === 'success' ? '#1B5E20' : '#B71C1C';
+              statusBox.style.cssText =
+                'display:block;background:' + bg + ';color:' + fg +
+                ';padding:1.2rem;border-radius:12px;margin-bottom:1.5rem;font-weight:500;';
+              statusBox.innerHTML = html;
+              statusBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+
+            form.addEventListener('submit', async function (e) {
               e.preventDefault();
-              var d = function (id) {
-                var el = document.getElementById(id);
-                return el ? (el.value || '').trim() : '';
-              };
-              var prenom = d('prenom');
-              if (!prenom) {
-                document.getElementById('prenom').focus();
+              if (!form.prenom.value.trim()) {
+                form.prenom.focus();
                 return;
               }
-              var line = function (label, val) { return val ? ('• ' + label + ' : ' + val + '\n') : ''; };
-              var msg =
-                'Bonjour Bénédicte 👋\n\n' +
-                'Je viens du site BeneDive et j\'aimerais avoir des informations / réserver.\n\n' +
-                line('Prénom', prenom) +
-                line('Nom', d('nom')) +
-                line('Prestation', d('prestation')) +
-                line('Dates', d('dates')) +
-                line('Niveau', d('niveau')) +
-                line('Personnes', d('personnes')) +
-                line('Hôtel', d('hotel'));
-              var note = d('message');
-              if (note) { msg += '\n📝 Mot perso :\n' + note + '\n'; }
-              msg += '\nMerci !';
-              var url = 'https://wa.me/' + PHONE + '?text=' + encodeURIComponent(msg);
-              window.open(url, '_blank', 'noopener');
+
+              var payload = {};
+              ['prenom','nom','email','telephone','prestation','dates','niveau','personnes','hotel','message','_honeypot'].forEach(function(k) {
+                var el = form.elements[k];
+                if (el) payload[k] = (el.value || '').trim();
+              });
+
+              submitBtn.disabled = true;
+              var originalLabel = submitBtn.textContent;
+              submitBtn.textContent = 'Envoi en cours…';
+
+              try {
+                var res = await fetch(WORKER_URL, {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify(payload),
+                });
+                var data = {};
+                try { data = await res.json(); } catch (_) {}
+
+                if (res.ok && data.success) {
+                  showStatus('success',
+                    '✓ <b>Demande envoyée !</b> Bénédicte vous recontacte sous 24&nbsp;h. ' +
+                    'Pour une réponse immédiate, vous pouvez aussi <a href="https://wa.me/201558664187" style="color:inherit;text-decoration:underline;">écrire directement sur WhatsApp</a>.'
+                  );
+                  form.reset();
+                } else {
+                  throw new Error((data && data.error) || 'Erreur réseau');
+                }
+              } catch (err) {
+                showStatus('error',
+                  '✗ Impossible d\'envoyer le formulaire. ' +
+                  'Écrivez directement sur <a href="https://wa.me/201558664187" style="color:inherit;text-decoration:underline;"><b>WhatsApp +20 15 58664187</b></a> — Bénédicte vous répond très vite.'
+                );
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalLabel;
+              }
             });
           })();
         </script>

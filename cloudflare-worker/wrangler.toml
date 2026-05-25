@@ -1,0 +1,21 @@
+name = "benedive-contact-form"
+main = "src/index.js"
+compatibility_date = "2026-01-01"
+
+# Domaine personnalisé après déploiement (optionnel)
+# routes = [
+#   { pattern = "form.benedive.com/*", custom_domain = true }
+# ]
+
+[vars]
+ALLOWED_ORIGIN = "https://www.benedive.com,https://benedive.com,https://golfix.github.io"
+
+# Les secrets sont à définir séparément avec :
+#   wrangler secret put WHATSAPP_PHONE_NUMBER_ID
+#   wrangler secret put WHATSAPP_ACCESS_TOKEN
+#   wrangler secret put BENEDICTE_PHONE
+#   wrangler secret put RESEND_API_KEY      (optionnel)
+#   wrangler secret put BENEDICTE_EMAIL     (optionnel)
+
+[observability]
+enabled = true

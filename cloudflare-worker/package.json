@@ -1,0 +1,19 @@
+{
+  "name": "benedive-contact-form",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cloudflare Worker — relais du formulaire de contact BeneDive vers WhatsApp Cloud API",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail",
+    "secret:wa-phone-id": "wrangler secret put WHATSAPP_PHONE_NUMBER_ID",
+    "secret:wa-token": "wrangler secret put WHATSAPP_ACCESS_TOKEN",
+    "secret:bene-phone": "wrangler secret put BENEDICTE_PHONE",
+    "secret:resend": "wrangler secret put RESEND_API_KEY",
+    "secret:bene-email": "wrangler secret put BENEDICTE_EMAIL"
+  },
+  "devDependencies": {
+    "wrangler": "^3.90.0"
+  }
+}
