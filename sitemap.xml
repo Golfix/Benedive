@@ -2,118 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-  <url>
-    <loc>https://www.benedive.com/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <!-- ==== Pages principales ==== -->
+  <url><loc>https://www.benedive.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://www.benedive.com/premiere-plongee.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://www.benedive.com/bapteme-plongee-hurghada.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://www.benedive.com/excursions.html</loc><changefreq>weekly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://www.benedive.com/cours-padi.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.benedive.com/sites-de-plongee-hurghada.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.benedive.com/tarifs.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.benedive.com/contact.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.benedive.com/a-propos.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
-  <url>
-    <loc>https://www.benedive.com/a-propos.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <!-- ==== Cours PADI ==== -->
+  <url><loc>https://www.benedive.com/cours-padi/open-water-diver.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.benedive.com/cours-padi/advanced-open-water.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.benedive.com/cours-padi/rescue-diver.html</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.benedive.com/cours-padi/divemaster.html</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.benedive.com/cours-padi/specialites.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
-  <url>
-    <loc>https://www.benedive.com/premiere-plongee.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.95</priority>
-  </url>
+  <!-- ==== Sites de plongée (pages individuelles) ==== -->
+  <url><loc>https://www.benedive.com/sites/thistlegorm.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.benedive.com/sites/abu-nuhas.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.benedive.com/sites/shaab-el-erg-dauphins.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.benedive.com/sites/iles-giftun.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.benedive.com/sites/erg-sabina.html</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.benedive.com/sites/carless-reef.html</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
 
-  <url>
-    <loc>https://www.benedive.com/bapteme-plongee-hurghada.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.95</priority>
-  </url>
+  <!-- ==== Excursions (pages individuelles) ==== -->
+  <url><loc>https://www.benedive.com/excursions/elphinstone-marsa-alam.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.benedive.com/excursions/nage-dauphins-hurghada.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.benedive.com/excursions/safari-desert-quad.html</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.benedive.com/excursions/le-caire-pyramides.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.benedive.com/excursions/louxor-vallee-des-rois.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
 
-  <url>
-    <loc>https://www.benedive.com/cours-padi.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
+  <!-- ==== Spécialités PADI (pages individuelles) ==== -->
+  <url><loc>https://www.benedive.com/specialites/nitrox-hurghada.html</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.benedive.com/specialites/deep-diver-hurghada.html</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.benedive.com/specialites/wreck-diver-hurghada.html</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.benedive.com/specialites/night-diver-hurghada.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
-  <url>
-    <loc>https://www.benedive.com/cours-padi/open-water-diver.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
+  <!-- ==== Pages géo (zones hôtelières) ==== -->
+  <url><loc>https://www.benedive.com/depuis/sahl-hasheesh.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.benedive.com/depuis/makadi-bay.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.benedive.com/depuis/el-gouna.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.benedive.com/depuis/safaga.html</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
 
-  <url>
-    <loc>https://www.benedive.com/cours-padi/advanced-open-water.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
+  <!-- ==== Guides / Blog SEO ==== -->
+  <url><loc>https://www.benedive.com/guides/quelle-saison-plonger-mer-rouge.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.benedive.com/guides/quel-niveau-pour-plonger-thistlegorm.html</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.benedive.com/guides/padi-ou-cmas.html</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.benedive.com/guides/liste-bagages-plongee-hurghada.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.benedive.com/guides/plonger-en-famille-hurghada.html</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
 
-  <url>
-    <loc>https://www.benedive.com/cours-padi/rescue-diver.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-  <url>
-    <loc>https://www.benedive.com/cours-padi/divemaster.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-  <url>
-    <loc>https://www.benedive.com/cours-padi/specialites.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://www.benedive.com/sites-de-plongee-hurghada.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://www.benedive.com/excursions.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-  </url>
-
-  <url>
-    <loc>https://www.benedive.com/excursions/elphinstone-marsa-alam.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://www.benedive.com/tarifs.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://www.benedive.com/galerie.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://www.benedive.com/temoignages.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://www.benedive.com/faq.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://www.benedive.com/contact.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <url>
-    <loc>https://www.benedive.com/mentions-legales.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
-  </url>
+  <!-- ==== Autres ==== -->
+  <url><loc>https://www.benedive.com/galerie.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.benedive.com/temoignages.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.benedive.com/faq.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.benedive.com/mentions-legales.html</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
 
 </urlset>
