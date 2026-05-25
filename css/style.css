@@ -1781,3 +1781,131 @@ textarea:focus-visible {
   height: 32px;
   color: var(--c-coral);
 }
+
+/* ==========================================================================
+   v5 — CMAS badge custom (pas d'asset officiel)
+   ========================================================================== */
+.cmas-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .9rem;
+  padding: .8rem 1.1rem;
+  background: linear-gradient(135deg, #003B5C 0%, #006C8A 100%);
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,59,92,.2);
+  line-height: 1.2;
+}
+.cmas-badge__mark {
+  font-family: 'Bricolage Grotesque', 'Manrope', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: .04em;
+  color: #F4A261;
+  border-right: 1px solid rgba(255,255,255,.25);
+  padding-right: .9rem;
+}
+.cmas-badge__label {
+  font-size: .78rem;
+  font-weight: 600;
+  opacity: .9;
+  letter-spacing: .02em;
+}
+
+/* ==========================================================================
+   v5 — Excursions teaser sur accueil
+   ========================================================================== */
+.excursions-teaser {
+  background: linear-gradient(135deg, #021829 0%, #003B5C 60%, #006C8A 100%);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.excursions-teaser::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(244,162,97,.18) 0%, transparent 50%),
+    radial-gradient(circle at 20% 80%, rgba(0,180,216,.15) 0%, transparent 50%);
+  pointer-events: none;
+}
+.excursions-teaser > * { position: relative; z-index: 1; }
+.excursions-teaser h2 { color: #fff; }
+.excursions-teaser .eyebrow {
+  color: #F4A261;
+  background: rgba(244,162,97,.15);
+  border-color: rgba(244,162,97,.4);
+}
+.exc-teaser-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+@media (max-width: 880px) {
+  .exc-teaser-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .exc-teaser-grid { grid-template-columns: 1fr; }
+}
+.exc-teaser-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  isolation: isolate;
+  transition: transform .3s ease, box-shadow .3s ease;
+  box-shadow: 0 12px 32px rgba(0,0,0,.25);
+}
+.exc-teaser-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 44px rgba(0,0,0,.35);
+  color: #fff;
+}
+.exc-teaser-card::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(2,24,41,.05) 0%, rgba(2,24,41,.85) 90%);
+  z-index: -1;
+}
+.exc-teaser-card--featured { grid-row: span 1; }
+.exc-teaser-card__tag {
+  display: inline-block;
+  background: rgba(244,162,97,.95);
+  color: #fff;
+  padding: .3rem .8rem;
+  border-radius: 999px;
+  font-size: .75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  align-self: flex-start;
+  margin-bottom: .8rem;
+}
+.exc-teaser-card h3 {
+  color: #fff;
+  font-size: 1.4rem;
+  margin: 0 0 .3rem;
+  line-height: 1.2;
+}
+.exc-teaser-card--featured h3 { font-size: 1.8rem; }
+.exc-teaser-card p {
+  margin: 0 0 .8rem;
+  font-size: .92rem;
+  opacity: .95;
+}
+.exc-teaser-card__price {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 800;
+  color: #F4A261;
+  font-size: 1.05rem;
+}
